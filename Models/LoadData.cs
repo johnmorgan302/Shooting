@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Shooting
 {
-    class LoadData
+    public class LoadData
     {
         [Key]
         public int LoadID { get; set; }

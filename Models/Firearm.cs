@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Shooting
 {
-    class Firearm
+    public class Firearm
     {
         [Key]
         public int FirearmID { get; set; }
