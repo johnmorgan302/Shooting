@@ -16,12 +16,14 @@ namespace Shooting
         public string Projectile { get; set; }
         
         [Required]
+        [Display(Name="Projectile Weight")]
         public float ProjectileWeight { get; set; }
 
         [Required]
         public string Propellent { get; set; }
 
         [Required]
+        [Display(Name="Propellent Weight")]
         public float PropellentWeight { get; set; }
 
         [Required]

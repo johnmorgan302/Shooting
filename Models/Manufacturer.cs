@@ -10,11 +10,14 @@ namespace Shooting
         public int ManufacturerID { get; set; }
 
         [Required]
+        [Display(Name="Manufacturer Name")]
         public string ManufacturerName { get; set; }
 
         public string Logo { get; set; }
 
         public string Wiki { get; set; }
+
+        [Display(Name="Web Site")]
         public string WebSite { get; set; }
 
         public virtual ICollection<Firearm> Firearms { get; set; }

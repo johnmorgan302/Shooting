@@ -10,6 +10,7 @@ namespace Shooting
         public int ChamberID { get; set; }
 
         [Required]
+        [Display(Name="Chamber")]
         public string ChamberName { get; set; }
 
         public string Wiki { get; set; }

@@ -32,16 +32,13 @@
 @foreach (var item in Model.Manufacturer) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ManufacturerName)
+                <a href="@item.WebSite">@item.ManufacturerName</a>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Logo)
+                <img src="@item.Logo" width="60px">
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Wiki)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WebSite)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ManufacturerID">Edit</a> |

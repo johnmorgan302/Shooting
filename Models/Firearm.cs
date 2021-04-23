@@ -10,6 +10,7 @@ namespace Shooting
         public int FirearmID { get; set; }
 
         [Required]
+        [Display(Name="Model")]
         public string FirearmName { get; set; }
 
         public string Wiki { get; set; }
