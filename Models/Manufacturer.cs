@@ -12,6 +12,8 @@ namespace Shooting
         [Required]
         public string ManufacturerName { get; set; }
 
+        public string Logo { get; set; }
+
         public string Wiki { get; set; }
         public string WebSite { get; set; }
 

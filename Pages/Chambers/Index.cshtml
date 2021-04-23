@@ -1,0 +1,42 @@
+@page
+@model Shooting.Pages_Chambers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Chamber[0].ChamberName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chamber[0].Wiki)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Chamber) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChamberName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wiki)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ChamberID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ChamberID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ChamberID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

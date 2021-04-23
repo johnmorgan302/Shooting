@@ -1,0 +1,72 @@
+@page
+@model Shooting.Pages_Loads.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadData[0].LoadName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadData[0].Projectile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadData[0].ProjectileWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadData[0].Propellent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadData[0].PropellentWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadData[0].Primer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadData[0].Chamber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.LoadData) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoadName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Projectile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectileWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Propellent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropellentWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Primer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chamber.ChamberName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.LoadID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.LoadID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.LoadID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

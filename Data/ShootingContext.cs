@@ -13,4 +13,10 @@ using Shooting;
         }
 
         public DbSet<Shooting.Manufacturer> Manufacturer { get; set; }
+
+        public DbSet<Shooting.Firearm> Firearm { get; set; }
+
+        public DbSet<Shooting.Chamber> Chamber { get; set; }
+
+        public DbSet<Shooting.LoadData> LoadData { get; set; }
     }

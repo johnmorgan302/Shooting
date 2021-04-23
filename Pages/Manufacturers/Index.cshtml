@@ -17,6 +17,9 @@
                 @Html.DisplayNameFor(model => model.Manufacturer[0].ManufacturerName)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Manufacturer[0].Logo)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Manufacturer[0].Wiki)
             </th>
             <th>
@@ -30,6 +33,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.ManufacturerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logo)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Wiki)

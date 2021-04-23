@@ -1,0 +1,61 @@
+@page
+@model Shooting.Pages_Loads.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>LoadData</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LoadData.LoadName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LoadData.LoadName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LoadData.Projectile)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LoadData.Projectile)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LoadData.ProjectileWeight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LoadData.ProjectileWeight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LoadData.Propellent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LoadData.Propellent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LoadData.PropellentWeight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LoadData.PropellentWeight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LoadData.Primer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LoadData.Primer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LoadData.Chamber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LoadData.Chamber.ChamberName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.LoadData.LoadID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
