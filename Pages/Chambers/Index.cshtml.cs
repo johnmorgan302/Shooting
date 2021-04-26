@@ -22,7 +22,7 @@ namespace Shooting.Pages_Chambers
 
         public async Task OnGetAsync()
         {
-            Chamber = await _context.Chamber.ToListAsync();
+            Chamber = await _context.Chamber.OrderBy( x=>x.ChamberName).ToListAsync();
         }
     }
 }

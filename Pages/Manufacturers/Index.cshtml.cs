@@ -22,7 +22,7 @@ namespace Shooting.Pages_Manufacturers
 
         public async Task OnGetAsync()
         {
-            Manufacturer = await _context.Manufacturer.ToListAsync();
+            Manufacturer = await _context.Manufacturer.OrderBy(x=>x.ManufacturerName).ToListAsync();
         }
     }
 }
